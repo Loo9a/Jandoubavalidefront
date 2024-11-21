@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Signup</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Image Section -->
+    <div class="cover">
+    </div>
+
+    <!-- Form Section -->
+    <div class="forms">
+      <div class="signup-form">
+        <div class="title">Signup</div>
+        <form (ngSubmit)="onRegister()">
+          <div class="input-boxes">
+            <div class="input-box">
+              <i class="fas fa-user"></i>
+              <input type="text" [(ngModel)]="user.nom" name="nom" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-envelope"></i>
+              <input type="text" [(ngModel)]="user.email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" [(ngModel)]="user.password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-user-tag"></i>
+              <select [(ngModel)]="user.role" name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="USER">Visitor</option>
+                <option value="ORGANIZER">Organizer</option>
+              </select>
+            </div>
+            <div class="button input-box">
+              <input type="submit" value="Signup">
+            </div>
+            <div class="text sign-up-text">Already have an account? <a routerLink="/login">Login now</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

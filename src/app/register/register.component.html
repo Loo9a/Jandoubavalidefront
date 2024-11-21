@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <div class="container">
+    <div class="cover">
+      <div class="front">
+        <img src="assets/imagess/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Welcome back<br></span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+      <div class="login-form">
+        <div class="title">Login</div>
+        <form (ngSubmit)="onLogin()">
+          <div class="input-boxes">
+            <div class="input-box">
+              <i class="fas fa-envelope"></i>
+              <input type="text" [(ngModel)]="user.email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" [(ngModel)]="user.password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="text"><a href="#">Forgot password?</a></div>
+            <div class="button input-box">
+              <input type="submit" value="Login">
+            </div>
+            <div class="text sign-up-text">Don't have an account? <a routerLink="/register">Signup now</a></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
